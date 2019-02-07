@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="680.0" style="-fx-background-color: #98a175;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button id="makeButton" fx:id="makeButton" layoutX="541.0" layoutY="6.0" mnemonicParsing="false" onDragDetected="#makeSQL" prefHeight="32.0" prefWidth="131.0" style="-fx-background-color: #69fc00;" text=" Выполнить запрос" AnchorPane.leftAnchor="541.0" AnchorPane.topAnchor="6.0">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <TextField id="sqlText" fx:id="sqlText" layoutX="46.0" layoutY="4.0" prefHeight="35.0" prefWidth="489.0" promptText="Введите сдесь SQL запрос" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="4.0">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></TextField>
+      <MenuButton fx:id="choosBox" layoutX="14.0" layoutY="50.0" mnemonicParsing="false" text="Команда">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <Button fx:id="deleteButton" layoutX="22.0" layoutY="374.0" mnemonicParsing="false" text="Удалить" />
+      <Button fx:id="createButton" layoutX="548.0" layoutY="337.0" mnemonicParsing="false" text="Создать Таблицу" />
+      <TextField fx:id="keyText" layoutX="22.0" layoutY="337.0" prefHeight="26.0" prefWidth="123.0" promptText="key" />
+      <TextField fx:id="tablenameText" layoutX="255.0" layoutY="337.0" promptText="Имя таблицы" />
+      <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@database.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="dropButton" layoutX="187.0" layoutY="374.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="81.0" text="Drop" />
+      <Button fx:id="trancateButton" layoutX="400.0" layoutY="374.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="81.0" text="Truncate" />
+      <Button fx:id="selectButton" layoutX="290.0" layoutY="374.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="81.0" text="Select all" />
+      <TableView fx:id="tableSelect" editable="true" layoutX="12.0" layoutY="78.0" prefHeight="257.0" prefWidth="659.0" />
+      <Button fx:id="insertButton" layoutX="20.0" layoutY="661.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="205.0" text="Вставить данные значения" />
+      <TextField fx:id="atributeName" layoutX="9.0" layoutY="424.0" promptText="Имя атрибута" />
+      <ComboBox fx:id="typeText" layoutX="180.0" layoutY="425.0" prefWidth="150.0" promptText="Тип данных" />
+      <CheckBox fx:id="notNull" layoutX="344.0" layoutY="427.0" mnemonicParsing="false" text="NOT NULL" />
+      <TextField fx:id="newText" layoutX="9.0" layoutY="454.0" prefHeight="26.0" prefWidth="152.0" promptText="Новое имя атрибута" />
+      <MenuButton fx:id="alterType" layoutX="456.0" layoutY="423.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" text="ALTER">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <TextField fx:id="countText" layoutX="414.0" layoutY="340.0" prefHeight="26.0" prefWidth="123.0" promptText="кол-во значений" />
+      <Button fx:id="insertButton" layoutX="548.0" layoutY="378.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="123.0" text="INSERT" />
+      <Button fx:id="updateButton" layoutX="161.0" layoutY="341.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" text="UPDATE" wrapText="true" />
+      <Button fx:id="viewButton" layoutX="185.0" layoutY="464.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="139.0" text="CREATE VIEW" />
+   </children>
+</AnchorPane>
